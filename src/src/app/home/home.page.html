@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Laufen
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+    <ion-button (click)="startTracking()" *ngIf="!isTracking" expand="block">
+      <ion-icon slot="start" name="locate"></ion-icon>
+      Start 
+    </ion-button>
+ 
+    <ion-button  (click)="stopTracking()" color="danger" *ngIf="isTracking" expand="block">
+      <ion-icon slot="start" name="hand"></ion-icon>
+      Stopp
+    </ion-button>
+  </div> 
+</ion-content>
